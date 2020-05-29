@@ -19,6 +19,7 @@
     ]
   },
   "dependencies": {
+    "@ant-design/pro-layout": "^6.0.0-4",
     "@umijs/preset-react": "1.x",
     "@umijs/test": "^3.0.18",
     "ali-oss": "^6.7.0",
