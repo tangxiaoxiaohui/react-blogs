@@ -1,102 +1,68 @@
-# 个人博客网站
-![](https://img.shields.io/badge/React-%5E16.12.0-brightgreen)
-![](https://img.shields.io/badge/dva-%5E2.4.1-brightgreen)
-![](https://img.shields.io/badge/umi-%5E3.0.18-brightgreen)
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-接下来我将对该项目进行大致的使用说明，后续也会写一份更为详细的免费的《Node全栈开发——带你从零开发前后端分离的个人网站》教程，带你从零开发到部署上线的全过程，敬请期待。您现在看的这个项目只是网站的前端项目，服务端项目地址请点击[服务端](https://github.com/immisso/blog-server)
+## Available Scripts
 
-## 关于Demo
-该项目采用`React+antd+umi+dva`技术栈进行实现。后续会部署到[https://www.immisso.com](https://www.immisso.com)，当前[https://www.immisso.com](https://www.immisso.com)上部署的是老版本的博客，仅供参考。最新版近期会部署上去。
+In the project directory, you can run:
 
+### `yarn start`
 
->**注意：** 接下来的说明都只针对该前端项目的说明。因为是前后端分离。所以启动是需要前后端一起启动的。服务端项目请移步[博客网站服务端](https://github.com/immisso/blog-server)
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-## 运行效果
-下面是一些主要功能的效果图。请君参考。
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
 
-首页详情页
-![](https://github.com/immisso/blog-web/blob/feature/public/images/%E9%A6%96%E9%A1%B5%E8%AF%A6%E6%83%85%E9%A1%B5001.gif)
+### `yarn test`
 
-写文章
-![](https://github.com/immisso/blog-web/blob/feature/public/images/%E7%BC%96%E8%BE%91%E5%99%A8%E9%A1%B5%E9%9D%A2002.gif)
+Launches the test runner in the interactive watch mode.<br />
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-管理页
-![](https://github.com/immisso/blog-web/blob/feature/public/images/%E7%AE%A1%E7%90%86%E9%A1%B5003.gif)
+### `yarn build`
 
-## 如何开始
+Builds the app for production to the `build` folder.<br />
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-#### clone项目到本地
+The build is minified and the filenames include the hashes.<br />
+Your app is ready to be deployed!
 
-```git
-$ git clone https://github.com/immisso/blog-web
-```
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-#### 安装依赖
+### `yarn eject`
 
-```bash
-$ npm install
-```
-或者
-```bash
-$ yarn
-```
-#### 启动项目
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-```bash
-$ npm run start
-```
-或
-```bash
-$ yarn start
-```
-启动成功后，然后再浏览器上打开[http://localhost:8888](http://localhost:8888)即可！
-虽然此时可以我们可以成功启动，但是还不能上传文件到阿里云，因为我们还需要一些配置。在`src/`目录下创建`config`文件夹，然后创建一个`secret.js`文件。改文件内容如下:
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-```javascript
-module.exports = {
-  accessKeyId: '', // 阿里云Keyid
-  accessKeySecret: '', // 阿里云Key secret
-  bucket: '', // Oss bucket 名字
-  ENCRYPT_KEY: '' // localStorage加密Key
-}
-```
-这样配置好，就可以成功上传文件了！
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-> 当然你要和服务端同时启用。
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## 功能介绍
-这个项目虽然不大，但是功能还算齐全。大体来说分为主网站和管理系统两部分。目前已经实现主要功能如下：
+## Learn More
 
-### 主网站
-+ [x] 登录
-+ [x] 注册
-+ [x] 文章列表
-+ [x] 点赞
-+ [x] 评论
-+ [x] markdown写文章
-+ [x] 阿里云上传图片
-+ [x] 保存草稿
-+ [x] 发表文章
-+ [x] 个人信息更新
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-### 管理系统
-+ [x] 分类管理（分类列表、添加、删除）
-+ [x] 标签管理（标签列表、添加、删除）
-+ [x] 文章管理（文章列表、删除）
-+ [x] 评论管理（评论列表、删除）
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-## 技术栈
+### Code Splitting
 
-该网站采用前后端分离技术，前端采用`React+antd+umi+dva`开发，服务端采用`Node`开发。主要功能模块包括
+This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
 
-+ `react`
-+ `antd`
-+ `umi`
-+ `dva`
-+ `react-markdown`
-+ `highlight.js`
+### Analyzing the Bundle Size
 
-## 特别说明
-该项目会长期更新。会逐步完善其他许多功能。如果写教程功能、邮件提醒、用户管理、主题风格、代码风格等。欢迎长期关注，请您star、star、star！谢谢
+This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
+### Making a Progressive Web App
 
+This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+
+### Advanced Configuration
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+
+### Deployment
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+
+### `yarn build` fails to minify
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify

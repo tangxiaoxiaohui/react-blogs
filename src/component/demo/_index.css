@@ -1,0 +1,16 @@
+.demo-wrap {
+  width: 100%;
+  height: 100%;
+}
+
+.demo-wrap > .item {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-indent: 20px;
+}
+
+.demo-wrap > .item:hover,
+.demo-wrap > .item.active {
+  background-color: cadetblue;
+}
